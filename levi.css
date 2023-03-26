@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333;
+}
+
+
+/* 
+.cardItem {
+    margin-bottom: 50px;
+     width: auto; 
+} */
+
+.card {
+    margin-bottom: 100px;
+    position: relative;
+    width: 340px;
+    height: 430px;
+    background: #333;
+    transition: 0.5s;
+}
+
+.card .lines {
+    position: absolute;
+    inset: 3px;
+    background: #000;
+    overflow: hidden;
+}
+
+.card .lines::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 120px;
+    background: linear-gradient(transparent, #45f3ff, #45f3ff, #45f3ff, transparent);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.card .lines::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card .imgBx {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 280px;
+    height: 280px;
+    background: #000;
+    transition: 0.5s;
+    z-index: 10;
+    overflow: hidden;
+    display: block;
+}
+
+.card .imgBx::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 150px;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(transparent, #ff3c7b, #ff3c7b, #ff3c7b, transparent);
+    animation: animate2 6s linear infinite;
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.card .imgBx::after {
+    content: '';
+    position: absolute;
+    inset: 3px;
+    background: #292929;
+}
+
+.card .imgBx img {
+    position: absolute;
+    width: calc(92%);
+    height: calc(92%);
+    top: 4%;
+    left: 4%;
+    z-index: 1;
+}
+
+.card .content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.card .content .details {
+    margin-top: 250px;
+    /* padding: -5px; */
+    text-align: center;
+    width: 99%;
+    transform: 0.5s;
+}
+
+.card .content .details h2 {
+    font-size: 1.15em;
+    font-weight: 600;
+    color: #45f3ff;
+    /* line-height: 1.2em; */
+}
+
+
+/* .card .content .details h2 span{
+    font-size: 0.75em;
+    font-weight: 500;
+    color: #fff;
+} */
+
+.card .content .details .data {
+    /* display: flex; */
+    justify-content: space-around;
+    /* margin: 14px 0; */
+}
+
+.card .content .details .data h3 {
+    font-size: 1.15em;
+    color: #ff3c7b;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.card .content .details .data h3 span {
+    font-size: 1em;
+    font-weight: 400;
+    color: #fff;
+}
+
+.actionBtn {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+button {
+    /* padding: 10px 10px; */
+    margin: 20px 5px;
+    position: relative;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    background: #45f3ff;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#b1:hover {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+
+#b2:hover {
+    background: linear-gradient(90deg, #e43603, #03a9f4, #15f13a, #f5ce62);
+    /* background: linear-gradient(to left top, blue, red);
+    background: linear-gradient(to left top, green, blue, red );*/
+    background-size: 400%;
+}
+
+#b2 {
+    background: #ff3c7b;
+}
+
+#b1:before,
+#b2:before {
+    content: '';
+    position: absolute;
+    background: inherit;
+    top: -5px;
+    right: -5px;
+    bottom: -5px;
+    left: -5px;
+    border-radius: 50px;
+    filter: blur(20px);
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#b1:hover:before,
+#b2:hover:before {
+    opacity: 1;
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 1;
+    animation: levi 8s linear infinite;
+}
+
+@keyframes levi {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
+}

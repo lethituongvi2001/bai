@@ -1,0 +1,179 @@
+/* Import google font - Poppins*/
+
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient( #ff3c7b, #7f00ff);
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    padding: 10px;
+    max-width: 1050px;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 7px;
+}
+
+.tools-board {
+    width: 210px;
+    padding: 15px 22px 0;
+}
+
+.tools-board .row {
+    margin-bottom: 20px;
+}
+
+.row .options {
+    list-style: none;
+    margin: 10px 0 0 5px;
+}
+
+.row .options .option {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.option:is(:hover,
+.active) img {
+    filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+
+.option :where(span,
+label) {
+    color: #5a6168;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:is(:hover,
+.active) :where(span,
+lable) {
+    color: chartreuse;
+}
+
+.option #fill-color {
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+}
+
+#fill-color:checked~label {
+    color: chartreuse;
+}
+
+.option #size-slider {
+    height: 5px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.colors .options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colors .option {
+    height: 20px;
+    width: 20px;
+    margin-top: 3px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.colors .option.selected::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    border: 2px solid #fff;
+    height: 12px;
+    width: 12px;
+    background: inherit;
+    border-radius: inherit;
+    transform: translate(-50%, -50%);
+}
+
+.colors .option:first-child.selected::before {
+    border-color: #ccc;
+}
+
+.option #color-picker {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.colors .option:nth-child(1) {
+    background-color: red;
+    border: 1px solid #bfbfbf;
+}
+
+.colors .option:nth-child(2) {
+    background-color: yellow;
+}
+
+.colors .option:nth-child(3) {
+    background-color: chartreuse;
+}
+
+.colors .option:nth-child(4) {
+    background-color: violet;
+}
+
+.colors .option:nth-child(5) {
+    background-color: blue;
+}
+
+.buttons button {
+    width: 100%;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 11px 0;
+    margin-bottom: 13px;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.buttons .clear-canvas {
+    color: #6c757d;
+    border: 1px solid #6c757d;
+    transition: all 0.3s ease;
+}
+
+.clear-canvas:hover {
+    color: #fff;
+    background: #6c757d;
+}
+
+.buttons .save-img {
+    background: #4a98f7;
+    border: 1px solid #4a98f7;
+}
+
+.drawing-board {
+    flex: 1;
+}
+
+.drawing-board canvas {
+    width: 100%;
+    height: 100%;
+}

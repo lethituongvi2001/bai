@@ -1,0 +1,57 @@
+- Khi nòa code thì nhớ pull về trước rồi hẳn code để commit.
+- git pull origin master 
+--(sau khi code xong)-->
+        git add .
+        git commit -m "comment"
+        git push origin master (đổi thành 'git push -f origin master' nếu lỗi)
+tui chỉ là hột mít kùi tro
+- lan anh ne
+- tuyet hanh ne
+- con chồn hôi
+
+- lan alan 2
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>git clone https://github.com/tuyethanh59/QLDAPM.git
+Cloning into 'QLDAPM'...
+remote: Enumerating objects: 190, done.
+remote: Counting objects: 100% (190/190), done.
+remote: Compressing objects: 100% (156/156), done.
+remote: Total 190 (delta 51), reused 150 (delta 29), pack-reused 0
+Receiving objects: 100% (190/190), 16.64 MiB | 569.00 KiB/s, done.
+Resolving deltas: 100% (51/51), done.
+
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>git init
+Initialized empty Git repository in D:/HocKy_VII/QuanLyDeAnPhanMem/DoAn/.git/
+
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>git remote origin https://github.com/tuyethanh59/QLDAPM.git
+error: Unknown subcommand: origin
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename [--[no-]progress] <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>git remote add origin https://github.com/tuyethanh59/QLDAPM.git
+
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>git pull origin master
+remote: Enumerating objects: 174, done.
+remote: Counting objects: 100% (174/174), done.
+remote: Compressing objects: 100% (142/142), done.
+remote: Total 174 (delta 49), reused 149 (delta 29), pack-reused 0Receiving objects:  70% (122/174), 15.82 MiB | 669.00 Receiving objects:  73% (128/174), 15.82 MiB | 669.00 KiB/s
+Receiving objects: 100% (174/174), 16.15 MiB | 441.00 KiB/s, done.
+Resolving deltas: 100% (49/49), done.
+From https://github.com/tuyethanh59/QLDAPM
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+D:\HocKy_VII\QuanLyDeAnPhanMem\DoAn>
